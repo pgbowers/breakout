@@ -13,3 +13,4 @@ window.onload = function () {
     // call the next module (Boot)
     game.state.start('Boot');   
 }
+kkoi
