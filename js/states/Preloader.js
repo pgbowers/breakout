@@ -14,9 +14,9 @@ myGame.Preloader.prototype = {
         //this.game.stage.backgroundColor = '#afa';
         // load all game assets
         // images, spritesheets, atlases, audio etc..
-        this.load.image('logo', 'assets/phaser2.png');
+        //this.load.image('logo', 'assets/phaser2.png');
         this.load.image('ball', 'assets/red_ball.png');
-        this.load.image('paddle', 'assets/bluepaddle.png');
+        this.load.image('paddle', 'assets/paddle_01.png');
         this.load.image('brick', 'assets/blueSquare.png');
         this.load.image('startButton', 'assets/redstart.png');
         this.load.image('background1','assets/water1.jpg');

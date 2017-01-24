@@ -16,7 +16,7 @@ myGame.gameCode.prototype = {
        this.physics.startSystem(Phaser.Physics.ARCADE);
         background = this.add.tileSprite(0, 0, 600, 400, 'background2');
        //Ball section
-       ball = this.add.sprite(this.world.width*0.5, this.world.height-25, 'ball');
+       ball = this.add.sprite(this.world.width*0.5, this.world.height-50, 'ball');
        ball.anchor.set(0.5);
        this.physics.enable(ball, Phaser.Physics.ARCADE);
        
@@ -37,7 +37,7 @@ myGame.gameCode.prototype = {
        //end of Ball section
        
        //Paddle section
-       paddle = this.add.sprite(this.world.width*0.5, this.world.height-5, 'paddle');
+       paddle = this.add.sprite(this.world.width*0.5, this.world.height-20, 'paddle');
        paddle.anchor.set(0.5, 1);
        this.physics.enable(paddle, Phaser.Physics.ARCADE);
        paddle.body.immovable = true;       
@@ -136,8 +136,8 @@ function ballLeavesScreen() {
             if (lives){
                 livesText.setText('Lives: '+lives);
                 lifeLostText.visible = true;
-                ball.reset(this.world.width*0.5, this.world.height-25);
-                paddle.reset(this.world.width*0.5, this.world.height-5);
+                ball.reset(this.world.width*0.5, this.world.height-50);
+                paddle.reset(this.world.width*0.5, this.world.height-20);
                 this.input.onDown.addOnce(function() {
                     lifeLostText.visible = false;
                     ball.body.velocity.set(xVelocity, yVelocity);
@@ -149,4 +149,3 @@ function ballLeavesScreen() {
             }
 }
 
-       
